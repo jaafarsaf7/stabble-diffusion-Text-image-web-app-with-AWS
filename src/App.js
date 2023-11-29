@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React, { Component } from 'react';
+import { Helmet } from 'react-helmet';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Button from 'react-bootstrap/Button';
@@ -59,7 +60,9 @@ class App extends Component {
  render() {
     return (
       <Container className='p-5 app-container' id='container' name='container'>
-        <title>Text-image generator</title>
+        <Helmet>
+          <title>Text-image generator</title>
+        </Helmet>
         <header className='app-header'>
           <div className='name-tag'>Jaafar Safar</div>
         </header>
