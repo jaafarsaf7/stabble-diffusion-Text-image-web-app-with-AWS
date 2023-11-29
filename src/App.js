@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React, { Component } from 'react';
+import { Helmet } from 'react-helmet';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Button from 'react-bootstrap/Button';
@@ -56,13 +57,17 @@ class App extends Component {
         console.log(error);
       });
   };
-  render() {
+ render() {
     return (
       <Container className='p-5 app-container' id='container' name='container'>
+        <Helmet>
+          <title>Text-image generator</title>
+          <link rel="icon" type="image/png" href={process.env.PUBLIC_URL + '/logo.png'} />
+        </Helmet>
         <header className='app-header'>
           <div className='name-tag'>Jaafar Safar</div>
         </header>
-        <h1> Welcome to Stable Diffusion AI</h1>
+        <h1>Welcome to Stable Diffusion AI</h1>
         <Form onSubmit={this.handleSubmit}>
           <Form.Group className='mb-3' controlId='formBasicEmail'>
             <Form.Label>Enter Text to convert Image</Form.Label>
