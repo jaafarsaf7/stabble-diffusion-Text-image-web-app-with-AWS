@@ -1,6 +1,5 @@
 import axios from 'axios';
 import React, { Component } from 'react';
-import { Helmet } from 'react-helmet';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Button from 'react-bootstrap/Button';
@@ -60,17 +59,13 @@ class App extends Component {
  render() {
     return (
       <Container className='p-5 app-container' id='container' name='container'>
-        <Helmet>
-          <title>Text-image generator</title>
-          <link rel="icon" type="image/png" href={process.env.PUBLIC_URL + '/logo.png'} />
-        </Helmet>
+        <title>Text-image generator</title>
         <header className='app-header'>
           <div className='name-tag'>Jaafar Safar</div>
         </header>
-        <h1>Welcome to Stable Diffusion AI</h1>
+        <h1>Welcome to My generative AI Web Application </h1>
         <Form onSubmit={this.handleSubmit}>
           <Form.Group className='mb-3' controlId='formBasicEmail'>
-            <Form.Label>Enter Text to convert Image</Form.Label>
             <Form.Control
               type='text'
               placeholder='Enter text to convert image'
@@ -81,7 +76,7 @@ class App extends Component {
               defaultValue={this.state.val}
             />
             <Form.Text className='text-muted'>
-              We'll attempt our best to create image you will love it!
+            Please write detailed text description in order to get more meaningful images
             </Form.Text>
           </Form.Group>
           <Button

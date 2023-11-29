@@ -5,7 +5,7 @@
   width: 100vw;
   height: 100vh;
   z-index: 999;
-  background-color: rgba(0, 0, 0, 0.262);
+  background-color: rgba(10, 10, 10, 0.262);
   text-align: center;
 }
 #backdrop button {

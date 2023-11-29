@@ -6,8 +6,7 @@ body, html {
   margin: 0;
   padding: 0;
   font-family: 'Chakra Petch', sans-serif;
-  background-color: #ffffff; /* White background */
-  color: #000000; /* Black text */
+  height: 100%; /* Full height */
 }
 
 /* App Component Styles */
@@ -17,8 +16,8 @@ body, html {
 
 /* Header Style */
 .App-header {
-  background-color: #ffffff; /* White background */
-  color: #000000; /* Black text */
+  background-color: #fbfafa; /* White background */
+  color: #f9f7f7; /* Black text */
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -29,7 +28,7 @@ body, html {
 
 /* Adjusting the position of "Jaafar Safar" to make room for "Made by" */
 .app-header .name-tag {
-  position: absolute;
+  position: absolute ;
   top: 0;
   right: 0;
   font-size: 20px;
@@ -40,16 +39,16 @@ body, html {
 
 /* Form and Button Styles */
 .form-label, .form-control {
-  color: #000000; /* Black text */
+  color: #faf8f8; /* Black text */
 }
 
 button, .btn {
   background-color: #000000; /* Black background for buttons */
-  color: #ffffff; /* White text */
+  color: #f8f4f4; /* White text */
 }
 
 button:hover, .btn:hover {
-  background-color: #333333; /* Darker shade of black on hover */
+  background-color: #f2eeee; /* Darker shade of black on hover */
 }
 
 /* Image Styles */
