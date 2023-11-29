@@ -7,6 +7,7 @@ import Form from 'react-bootstrap/Form';
 import Spinner from 'react-bootstrap/Spinner';
 import Container from 'react-bootstrap/Container';
 import Image from 'react-bootstrap/Image';
+import './App.css';
 
 class App extends Component {
   state = {
@@ -57,7 +58,10 @@ class App extends Component {
   };
   render() {
     return (
-      <Container className='p-5' id='container' name='container'>
+      <Container className='p-5 app-container' id='container' name='container'>
+        <header className='app-header'>
+          <div className='name-tag'>Jaafar Safar</div>
+        </header>
         <h1> Welcome to Stable Diffusion AI</h1>
         <Form onSubmit={this.handleSubmit}>
           <Form.Group className='mb-3' controlId='formBasicEmail'>
