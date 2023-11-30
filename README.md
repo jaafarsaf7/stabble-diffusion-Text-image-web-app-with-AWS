@@ -1,8 +1,38 @@
-# Stable Diffusion Generative AI Fullstack Application
+# Stable Diffusion Generative AI Fullstack Web Application
+Let's build a full-stack application to call the Stable Diffusion AI model. We will first build the backend and then the frontend. The backend includes: 1) SageMaker 2) Lambda 3) API Gateway. Frontend includes React Web APP deployed in Amplify. 
 
-Lets build a full stack application to call Stable Diffusion AI model. We will first build the backend then frontend. Backend includes: 1) SageMaker 2) Lambda 3) Api Gateway. And Frontend includes react web app deployed in Amplify.
+![](https://i.imgur.com/jXoCpiX.png)
 
-- [Stable Diffusion Generative AI Fullstack Application](#stable-diffusion-generative-ai-fullstack-application)
+## Demo
+[Link for the App](https://main.d651i91z10nc4.amplifyapp.com/)
+
+
+## Architecture Diagram
+
+![](https://i.imgur.com/hheCiDJ.png)
+
+## How to run this project locally?
+
+```
+# Clone the repository to your local machine
+git clone https://github.com/rupeshtiwari/amplify-react-stabledapp.git
+# Go to the project folder
+cd amplify-react-stabledapp
+# Install npm dependencies with exact versions from package-lock.json file
+ 
+npm ci 
+# Run the react app
+npm start
+```
+![](https://imgur.com/DtYeN22.png)
+
+
+**Table of Contents**
+
+- [Stable Diffusion Generative AI Fullstack Web Application](#stable-diffusion-generative-ai-fullstack-web-application)
+  - [Demo](#demo)
+  - [Architecture Diagram](#architecture-diagram)
+  - [How to run this project locally?](#how-to-run-this-project-locally)
   - [Build Backend](#build-backend)
     - [Step 1: Create SageMaker domain](#step-1-create-sagemaker-domain)
     - [Step 2: Deploy Stable Diffusion model](#step-2-deploy-stable-diffusion-model)
@@ -23,6 +53,7 @@ Lets build a full stack application to call Stable Diffusion AI model. We will f
     - [Step 3: Deploy your app with AWS Amplify](#step-3-deploy-your-app-with-aws-amplify)
     - [Step 4: Automatically deploy code changes CI/CD](#step-4-automatically-deploy-code-changes-cicd)
   - [References](#references)
+
 
 ## Build Backend
 
@@ -89,10 +120,8 @@ create bucket called as `stabled`
 
 ```
 Environment variables (2)
-
 The environment variables below are encrypted at rest with the default Lambda service key.
 Key
-
 Value
 AWS_SM_EP	jumpstart-example-infer-model-txt2img-s-2023-02-16-01-51-11-187
 OUT_S3_BUCKET_NAME	testbucket-rupesh
@@ -208,10 +237,10 @@ Now that you have an API and a Lambda function in place, let’s look at the tes
 ### Step 6: Test Data via REST API using POSTMAN
 
 1. Use the POST request `https://mko6b9drb2.execute-api.us-east-1.amazonaws.com/test/stabled`
-2. Use body `{"data":"trees, river, sunset , birds"}`  
+2. Use body `{"data":"vanilla cake"}`
 3. Send it will take around 20-25 sec to get you pre-signed url for image.
 
-![](https://imgur.com/91Ei3dd.png)
+![](./documents/vanilla%20cake%2020f4c915-16b0-4d61-aa06-d6581f7ca566.png)
 
 ## Build Frontend
 
@@ -238,7 +267,6 @@ npm start
    git init
    git add .
    git commit -m "initial commit"
-
    git remote add origin git@github.com:username/reponame.git
    git branch -M main
    git push -u origin main
@@ -274,7 +302,6 @@ In this step, you will make some changes to the code using your text editor and 
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-
 function App() {
   return (
     <div className="App">
@@ -285,7 +312,6 @@ function App() {
     </div>
   );
 }
-
 export default App;
 ```
 
