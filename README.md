@@ -15,9 +15,9 @@ Let's build a full-stack application to call the Stable Diffusion AI model. We w
 
 ```
 # Clone the repository to your local machine
-git clone https://github.com/rupeshtiwari/amplify-react-stabledapp.git
+git clone https://github.com/jaafarsaf7/stabble-diffusion-Text-image-web-app-with-AWS.git
 # Go to the project folder
-cd amplify-react-stabledapp
+cd stabble-diffusion-Text-image-web-app-with-AW
 # Install npm dependencies with exact versions from package-lock.json file
  
 npm ci 
